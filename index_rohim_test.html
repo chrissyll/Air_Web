@@ -19,27 +19,16 @@
         }
 
         .carousel-item {
-            max-height: 100vh;
-            /* view port height 依裝置高度調整 */
+            max-height: 100vh;  /* view port height 依裝置高度調整 */
         }
 
-        .nav {
-            background-color: rgba(255, 255, 255, .8);
-            height: 56px;
+        .head-left{
+            flex: 1; 
+            background-color: rgba(255, 255, 255, .1);
+            border-right: 1px solid rgba(255, 255, 255, 0.29);            
         }
-
-        .nav-link:hover {
-            color: white !important;
-        }
-
-        .nav-item:hover {
-            background-color: #13a1c5;
-            color: white;
-            border-radius: 2px;
-        }
-
-        .navbar-nav {
-            margin-right: 30%;
+        .head-right{
+            flex: 2; 
         }
     </style>
 </head>
@@ -61,8 +50,39 @@
             <div class="carousel-item">
                 <img class="d-block w-100" src="./images/photo-1513635269975-59663e0ac1ad.jpg" alt="Third slide">
             </div>
-            <div style="position:absolute; top:0; height:100%; width: 100%; background-color:green; z-index: 2000; opacity: .4;">
-                
+
+            <div class="w-100 h-100 d-flex" style="position: absolute; top: 0;">
+                <div class="head-left">
+
+                </div>
+                <div class="head-right">
+                    <div style="background-color: goldenrod">
+                        <div>
+                            <label for="inputCity">City-To</label>
+                            <input type="text" class="form-control" id="inputCity">
+                        </div>
+                        <div>
+                            <label for="inputCityA">City-Arrive</label>
+                            <input type="text" class="form-control" id="inputCityA">
+                        </div>
+                        <div>
+                            <label for="inputDate">Date</label>
+                            <input type="date" class="form-control" id="inputDate">
+                        </div>
+                        <div>
+                            <label for="inputDate2">Date</label>
+                            <input type="date" class="form-control" id="inputDate2">
+                        </div>
+                        <div class="form-group col-md-4">
+                            <label for="inputState">State</label>
+                            <select id="inputState" class="form-control">
+                                <option selected>Choose...</option>
+                                <option>...</option>
+                            </select>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Submit</button>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
