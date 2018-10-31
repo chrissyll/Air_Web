@@ -29,7 +29,17 @@
         }
         .head-right{
             flex: 2; 
+            margin-left: 30px;
+            
+
         }
+        .head-right>div>div{
+            display: inline-block;
+        }
+        .head-right>div>div>label{
+            margin-bottom: 0;
+        }
+        
     </style>
 </head>
 
@@ -55,21 +65,21 @@
                 <div class="head-left">
 
                 </div>
-                <div class="head-right">
-                    <div style="background-color: goldenrod">
-                        <div>
+                <div class="head-right d-flex align-items-center">
+                    <div style="padding: 20px; background-color: silver">
+                        <div class="col-md-4">
                             <label for="inputCity">City-To</label>
                             <input type="text" class="form-control" id="inputCity">
                         </div>
-                        <div>
+                        <div class="col-md-4">
                             <label for="inputCityA">City-Arrive</label>
                             <input type="text" class="form-control" id="inputCityA">
                         </div>
-                        <div>
+                        <div class="col-md-4">
                             <label for="inputDate">Date</label>
                             <input type="date" class="form-control" id="inputDate">
                         </div>
-                        <div>
+                        <div class="col-md-4">
                             <label for="inputDate2">Date</label>
                             <input type="date" class="form-control" id="inputDate2">
                         </div>
