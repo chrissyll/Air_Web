@@ -17,62 +17,54 @@
         * {
             font-family: 'Poppins', sans-serif;
         }
-
-        .carousel-inner {
-            max-height: 100vh;
-        }
-
     </style>
 </head>
 
 <!-- 主色: #13a1c5 -->
 
 <body>
+    <style>
+        .div1 {
+            width: 450px;
+            height: 343px;
+            background-color: rgb(142, 206, 195);
+            margin-top: 100px;
+            position: relative;
+            /*  overflow: hidden; */
+        }
 
+        .div2 {
+            background-color: rgba(5, 5, 5, 0.158);
+            position: absolute;
+            width: 100%;
+            top: -0;
+            text-align: right;
+            opacity: .5;
+            cursor: pointer;
+        }
 
+        #ul1 li.selected { 
+            color: red;
+        }
+    </style>
 
-    <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
-        <ol class="carousel-indicators">
-            <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-            <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-            <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-            <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
-        </ol>
-        <div class="carousel-inner">
-            <div class="carousel-item active">
-                <img class="d-block w-100" src="./images/photo-1508711046474-2f4c2d3d30ca.jpg" alt="First slide">
-            </div>
-            <div class="carousel-item">
-                <img class="d-block w-100" src="./images/photo-1513635269975-59663e0ac1ad.jpg" alt="Second slide">
-            </div>
-            <div class="carousel-item">
-                <img class="d-block w-100" src="./images/photo-1540266681689-d4c6be0c3f94.jpg" alt="Third slide">
-            </div>
-            <div class="carousel-item">
-                <img class="d-block w-100" src="./images/photo-1540584315230-308b1bba926b.jpg" alt="Third slide">
-            </div>
-        </div>
-        <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="sr-only">Previous</span>
-        </a>
-        <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="sr-only">Next</span>
-        </a>
+    <button id="btn1" class="btn btn-info">123</button>
+    <div class="div1">
+        <ul id="ul1" class="div2 list-group">
+            <li class="list-group-item">USA</li>
+            <li class="list-group-item">Venice</li>
+            <li class="list-group-item">France</li>
+            <li class="list-group-item">Italy</li>
+            <li class="list-group-item">Paris</li>
+            <li class="list-group-item">Rome</li>
+            <li class="list-group-item">USA</li>
+            <li class="list-group-item">Venice</li>
+            <li class="list-group-item">France</li>
+            <li class="list-group-item">Italy</li>
+            <li class="list-group-item">Paris</li>
+            <li class="list-group-item">Rome</li>
+        </ul>
     </div>
-
-    <nav class="navbar navbar-light bg-light">
-        <form class="form-inline">
-            <button type="button" class="btn btn-info">Info</button>
-            <button type="button" class="btn btn-info">Info</button>
-            <button type="button" class="btn btn-info">Info</button>
-            <button type="button" class="btn btn-outline-info">Info</button>
-            <button type="button" class="btn btn-outline-info">Info</button>
-            <button type="button" class="btn btn-outline-info">Info</button>
-        </form>
-    </nav>
-
 
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="/js/jquery-3.3.1.js"></script>
@@ -80,6 +72,32 @@
     <script src="/js/bootstrap-4.1.3.js"></script>
 
     <script>
+        $("#btn1").on("click", () => 
+        {
+            /* $("#ul1").css("top", "-49px"); */
+
+            // 5, -49
+            // 6, -98
+            // 7, -147
+
+            $("#ul1").animate(
+            {
+                top: "-49px"
+            }, 400);
+        });
+        
+        $("#ul1 li").on("click", function () 
+        {
+            var indexa = $("#ul1 li").index($(this)) + 1;
+            var offsetPx = (indexa - 4) * 49;
+
+            $("#ul1").animate(
+            {
+                top: -offsetPx + "px"
+            }, 400);
+
+            $(this).addClass("selected");
+        });
 
     </script>
 </body>
