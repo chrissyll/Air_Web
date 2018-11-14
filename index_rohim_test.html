@@ -22,7 +22,30 @@
         }
         .head-left{
             flex: 1; 
-            background-color: rgba(255, 255, 255, .1);
+            /* background-color: rgba(255, 255, 255, .1); */
+            background-color: rgba(0, 0, 0, .2);
+            border-right: 1px solid rgba(255, 255, 255, 0.29);
+        }
+        .city-btns-wrapper {
+            overflow: hidden;
+        }
+        .city-btns{
+            display: flex;   
+            flex-direction: column;
+            margin-right: 15px;
+            position: relative;
+        }
+        /* rohim added */
+        .city-btns button{
+            text-align: right;
+            font-weight: bold;
+            background-color: rgba(255, 255, 255, 0);
+            border: 0;
+            cursor: pointer;
+            font-size: 1.2em;
+            line-height: 2.2em;
+            color: white;
+            outline: none;
         }
         .head-right{
             flex: 2; 
@@ -40,7 +63,7 @@
 <!-- 主色: #13a1c5 -->
 
 <body>
-    <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+    <div id="carouselExampleIndicators" class="carousel slide carousel-fade" data-ride="carousel">
         <div class="carousel-inner">
             <div class="carousel-item active">
                 <img class="d-block w-100" src="./images/u.jpg" alt="First slide">
@@ -62,16 +85,20 @@
             </div>
 
             <div class="w-100 h-100 d-flex" style="position: absolute; top: 0;">
-                <div class="head-left">
-                    <button id="btn1" data-target="#carouselExampleIndicators" data-slide-to="0">USA</button>
-                    <button id="btn2" data-target="#carouselExampleIndicators" data-slide-to="1">Venice</button>
-                    <button id="btn3" data-target="#carouselExampleIndicators" data-slide-to="2">France</button>
-                    <button id="btn4" data-target="#carouselExampleIndicators" data-slide-to="3">Italy</button>
-                    <button id="btn5" data-target="#carouselExampleIndicators" data-slide-to="4">Paris</button>
-                    <button id="btn6" data-target="#carouselExampleIndicators" data-slide-to="5">Rome</button>
+                <div class="head-left d-flex align-items-center justify-content-end">
+                    <div class="city-btns-wrapper">
+                        <div class="city-btns d-flex">
+                            <button id="btn1" data-target="#carouselExampleIndicators" data-slide-to="0">USA</button>
+                            <button id="btn2" data-target="#carouselExampleIndicators" data-slide-to="1">Venice</button>
+                            <button id="btn3" data-target="#carouselExampleIndicators" data-slide-to="2">France</button>
+                            <button id="btn4" data-target="#carouselExampleIndicators" data-slide-to="3">San Francisco</button>
+                            <button id="btn5" data-target="#carouselExampleIndicators" data-slide-to="4">The Netherlands</button>
+                            <button id="btn6" data-target="#carouselExampleIndicators" data-slide-to="5">Rome</button>
+                        </div>
+                    </div>
                 </div>
 
-                <div class="head-right d-flex align-items-center">
+                <div class="head-right d-flex align-items-center align-content-center">
                     <div style="padding: 20px; background-color: rgba(192, 192, 192, 0.767)">
                         <div class="col-md-4">
                             <label for="inputCity">City-To</label>
@@ -117,7 +144,6 @@
                 </nav>
             </div>
 
-
         </div>
     </div>
 
@@ -131,9 +157,13 @@
             $("#inputState option:selected").removeAttr("selected");
             var btnText = $(this).text();
             $("#inputState option:contains('" + btnText + "')").attr('selected', true);
-
-            /*  $(".carousel-inner .carousel-item").removeClass("active");
-             $(".carousel-inner .carousel-item:eq(2)").addClass("active"); */
+            
+            var indexa = $(".city-btns button").index($(this)) + 1;
+            /* var offsetPx = (indexa - 4) * 30;  */
+            var offsetPx = (indexa - 4) * 44; 
+            $(".city-btns").animate({
+                top: -offsetPx + "px"
+            }, 400);
         });
     </script>
 </body>
