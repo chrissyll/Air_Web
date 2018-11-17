@@ -8,54 +8,73 @@
     <title>Document</title>
 
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="/css/bootstrap-4.1.3.css">
+    <link rel="stylesheet" href="./css/bootstrap-4.1.3.css">
 
     <!--  Google Font -->
     <link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet">
+
+    <!-- Custom Css-->
+    <link rel="stylesheet" href="./css/Home/Carousel.css">
 
     <style>
         * {
             font-family: 'Poppins', sans-serif;
         }
-        .carousel-item {
-            max-height: 100vh;  /* view port height 依裝置高度調整 */
+
+        .iw-heading{
+            margin-top:90px;
+            margin-bottom: 60px;
+            text-align: center;
         }
-        .head-left{
-            flex: 1; 
-            /* background-color: rgba(255, 255, 255, .1); */
-            background-color: rgba(0, 0, 0, .2);
-            border-right: 1px solid rgba(255, 255, 255, 0.29);
+        .iwh-title{
+            color: #282828; 
+            font-size: 48px;
+            font-weight: 300;
+            line-height: 1
+        }        
+        .wpb_wrapper{
+            justify-content:center;
+            flex: 1;
+            padding: 50px 10px;
+            margin: 50px;
+            height: 300px;
+            line-height:2;
         }
-        .city-btns-wrapper {
+        .wpb_imgr {
+            flex: 2;
+            margin-left: 100px;
+            margin-right: 30px;
+            padding: 20px;
+            position: relative;
+           
+        }
+        .wpb_imgr img {
+            position: absolute;
+            left: 700px;
+            opacity: 0.3;
+            width: 650px;
+            box-shadow: 1.25rem 1.375rem 4.75rem 0 rgba(0,0,0,.22);
+        }
+        #PromotionSection {
             overflow: hidden;
         }
-        .city-btns{
-            display: flex;   
-            flex-direction: column;
-            margin-right: 15px;
+        .wpb_imgl{
+            flex: 2;
+            margin-left: 30px;
+            margin-right: 100px;
+            padding: 20px;
             position: relative;
         }
-        /* rohim added */
-        .city-btns button{
-            text-align: right;
-            font-weight: bold;
-            background-color: rgba(255, 255, 255, 0);
-            border: 0;
-            cursor: pointer;
-            font-size: 1.2em;
-            line-height: 2.2em;
-            color: white;
-            outline: none;
+        .wpb_imgl img {
+            position: absolute;
+            right: 700px;
+            opacity: 0.3;
+            width: 650px;
+            box-shadow: 1.25rem 1.375rem 4.75rem 0 rgba(0,0,0,.22);
         }
-        .head-right{
-            flex: 2; 
-            margin-left: 30px;
-        }
-        .head-right>div>div{
-            display: inline-block;
-        }
-        .head-right>div>div>label{
-            margin-bottom: 0;
+
+        .navbar{
+            display: none;
         }
     </style>
 </head>
@@ -92,7 +111,8 @@
                             <button id="btn2" data-target="#carouselExampleIndicators" data-slide-to="1">Venice</button>
                             <button id="btn3" data-target="#carouselExampleIndicators" data-slide-to="2">France</button>
                             <button id="btn4" data-target="#carouselExampleIndicators" data-slide-to="3">San Francisco</button>
-                            <button id="btn5" data-target="#carouselExampleIndicators" data-slide-to="4">The Netherlands</button>
+                            <button id="btn5" data-target="#carouselExampleIndicators" data-slide-to="4">The
+                                Netherlands</button>
                             <button id="btn6" data-target="#carouselExampleIndicators" data-slide-to="5">Rome</button>
                         </div>
                     </div>
@@ -122,8 +142,8 @@
                                 <option>USA</option>
                                 <option>Venice</option>
                                 <option>France</option>
-                                <option>Italy</option>
-                                <option>Paris</option>
+                                <option>San Francisco</option>
+                                <option>The Netherlands</option>
                                 <option>Rome</option>
                             </select>
                         </div>
@@ -143,27 +163,100 @@
                     </form>
                 </nav>
             </div>
+        </div>
+    </div>
+
+    <div id="PromotionSection">
+        <div class="iw-heading">
+            <h3 class="iwh-title">Beautiful tris with...<strong>Specical offers</strong></h3>
+            <div class="iwh-description">Curabitur nunc erat, consequat in erat ut, congue bibendum nulla. Suspendisse
+                id pharetra lacus, et hendrerit mi
+                <br>
+                Praesent at vestibulum tortor. Praesent condimentum efficitur massa</div>
+        </div>
+        <div class="wpb_column d-flex">
+            <div class="wpb_wrapper">
+                <h3>Private Jet Charter</h3>
+                <p>We provide aircraft charters to business professionals, to maximise their time efficiency. Today we
+                    provide aircraft charters to business professionals, to maximise their time efficiency.</p>
+                <p><a href="http://demo.curlythemes.com/private-jet/services/private-jet-2/"><strong>READ MORE</strong></a></p>
+            </div>
+            <div class="wpb_imgr">
+                <img class="img-fluid" src="./images/adobestock-1.jpg" alt="">
+            </div>
+        </div>
+        <div class="d-flex">
+            <div class="wpb_imgl">
+                <img class="img-fluid" src="./images/adobestock-2.jpg" alt="">
+            </div>
+            <div class="wpb_wrapper">
+                <h3>Business Jet Charter</h3>
+                <p>We provide aircraft charters to business professionals, to maximise their time efficiency. Today we
+                    provide aircraft charters to business professionals, to maximise their time efficiency.</p>
+                <p><a href="http://demo.curlythemes.com/private-jet/services/business-jets/"><strong>READ MORE</strong></a></p>
+            </div>
+        </div>
+
+        <div>
 
         </div>
     </div>
 
+    <!--   <div>
+        <div class="card-deck">
+            <div class="card">
+                <img class="card-img-top" src=".../100px200/" alt="Card image cap">
+                <div class="card-body">
+                    <h5 class="card-title">Card title</h5>
+                    <p class="card-text">This is a longer card with supporting text below as a natural lead-in to
+                        additional content. This content is a little bit longer.</p>
+                    <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                </div>
+            </div>
+            <div class="card">
+                <img class="card-img-top" src=".../100px200/" alt="Card image cap">
+                <div class="card-body">
+                    <h5 class="card-title">Card title</h5>
+                    <p class="card-text">This card has supporting text below as a natural lead-in to additional
+                        content.</p>
+                    <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                </div>
+            </div>
+            <div class="card">
+                <img class="card-img-top" src=".../100px200/" alt="Card image cap">
+                <div class="card-body">
+                    <h5 class="card-title">Card title</h5>
+                    <p class="card-text">This is a wider card with supporting text below as a natural lead-in to
+                        additional content. This card has even longer content than the first to show that equal height
+                        action.</p>
+                    <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                </div>
+            </div>
+        </div>
+    </div> -->
+
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="/js/jquery-3.3.1.js"></script>
-    <script src="/js/popper-1.14.3.js"></script>
-    <script src="/js/bootstrap-4.1.3.js"></script>
+    <script src="./js/jquery-3.3.1.js"></script>
+    <script src="./js/popper-1.14.3.js"></script>
+    <script src="./js/bootstrap-4.1.3.js"></script>
+
+    <!-- Custom Css-->
+    <script src="./js/Home/Carousel.js"></script>
 
     <script>
-        $(".head-left button").click(function () {
-            $("#inputState option:selected").removeAttr("selected");
-            var btnText = $(this).text();
-            $("#inputState option:contains('" + btnText + "')").attr('selected', true);
-            
-            var indexa = $(".city-btns button").index($(this)) + 1;
-            /* var offsetPx = (indexa - 4) * 30;  */
-            var offsetPx = (indexa - 4) * 44; 
-            $(".city-btns").animate({
-                top: -offsetPx + "px"
-            }, 400);
+
+        $(window).on("scroll", function () {
+            var scrollDistance = $(window).scrollTop();
+            if (scrollDistance > 370) {
+                $('.wpb_imgr .img-fluid').animate({
+                    left: 50 + "px",
+                    opacity: 1
+                }, 700);
+                $('.wpb_imgl .img-fluid').animate({
+                    right: 50 + "px",
+                    opacity: 1
+                }, 700);
+            }
         });
     </script>
 </body>
