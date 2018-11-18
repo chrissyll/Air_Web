@@ -1,5 +1,11 @@
-.carousel-item {
-    max-height: 100vh;  /* view port height 依裝置高度調整 */
+.carousel-item{
+    max-height: calc(100vh - 56px);   /* view port height 依裝置高度調整 */
+}
+.carousel-item img{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 110%;
 }
 .head-left{
     flex: 1; 
