@@ -1,0 +1,358 @@
+.hover,
+.hover .overlay {
+    width: 100%;
+    height: 100%;
+    overflow: hidden
+}
+
+.hover,
+.hover h2 {
+    text-align: center
+}
+
+.ehover11 .overlay::before,
+.ehover12 h2::after{
+    content: ''
+}
+
+.hover button.info,
+.hover h2 {
+    text-transform: uppercase;
+    color: #fff
+}
+
+.hover {
+    float: left;
+    position: relative;
+    cursor: default
+}
+
+.hover .overlay {
+    position: absolute;
+    top: 0;
+    left: 0
+}
+
+.hover img {
+    display: block;
+    position: relative;
+    width: 100%;
+}
+
+.hover button.info {
+    display: inline-block
+}
+
+.hover h2 {
+    position: relative;
+    font-size: 17px;
+    padding: 10px;
+    background: rgba(0, 0, 0, .6)
+}
+
+.hover button.info {
+    text-decoration: none;
+    padding: 7px 14px;
+    border: 1px solid #fff;
+    margin: 50px 0 0;
+    border-radius: 0;
+    background-color: transparent
+}
+
+.hover button.info:hover {
+    box-shadow: 0 0 5px #fff
+}
+
+.ehover5 button.info:hover,
+.hover button.nullbutton:hover {
+    box-shadow: none
+}
+
+.hover button.nullbutton {
+    border: none;
+    padding: 0;
+    margin: 0
+}
+
+.point {
+    cursor: pointer
+}
+
+.ehover1 img {
+    transition: all .4s linear
+}
+
+.ehover1 .overlay {
+    opacity: 0;
+    background-color: rgba(0, 0, 0, .5);
+    transition: all .4s ease-in-out
+}
+
+.ehover1 h2 {
+    transform: translatey(-100px);
+    opacity: 0;
+    transition: all .2s ease-in-out
+}
+
+.ehover1 button.info {
+    opacity: 0;
+    transition: all .2s ease-in-out
+}
+
+.ehover1:hover img {
+    transform: scale(1.2)
+}
+
+.ehover1:hover .overlay {
+    opacity: 1
+}
+
+.ehover1:hover button.info,
+.ehover1:hover h2 {
+    opacity: 1;
+    transform: translatey(0)
+}
+
+.ehover1:hover button.info {
+    transition-delay: .2s
+}
+
+.ehover1v2 img {
+    transition: all .4s cubic-bezier(.88, -.99, 0, 1.81)
+}
+
+.ehover1v2 .overlay {
+    opacity: 0;
+    background-color: rgba(0, 0, 0, .5);
+    transition: all .4s cubic-bezier(.88, -.99, 0, 1.81)
+}
+
+.ehover1v2 h2 {
+    transform: translatey(-100px);
+    opacity: 0;
+    transition: all .2s cubic-bezier(.88, -.99, 0, 1.81)
+}
+
+.ehover1v2 button.info {
+    opacity: 0;
+    transition: all .2s ease-in-out
+}
+
+.ehover1v2:hover img {
+    transform: scale(1.2)
+}
+
+.ehover1v2:hover .overlay {
+    opacity: 1
+}
+
+.ehover1v2:hover button.info,
+.ehover1v2:hover h2 {
+    opacity: 1;
+    transform: translatey(0)
+}
+
+.ehover1v2:hover button.info {
+    transition-delay: .2s
+}
+
+.ehover5 h2,
+.ehover5 img {
+    transition: all .4s ease-in-out
+}
+
+.ehover5 img {
+    transform: scale(1.1)
+}
+
+.ehover5:hover img {
+    transform: scale(1)
+}
+
+.ehover5 .overlay {
+    transition: all .4s ease-in-out
+}
+
+.ehover5:hover .overlay {
+    background-color: rgba(170, 170, 170, .4)
+}
+
+.ehover5 button.info {
+    opacity: 0;
+    transform: scale(1.5);
+    transition: all .4s ease-in-out;
+    font-weight: 400;
+    border: 1px solid #fff;
+    height: 85%;
+    width: 85%;
+    position: absolute;
+    top: -20%;
+    left: 8%;
+    padding: 70px
+}
+
+.ehover5:hover button.info {
+    opacity: 1;
+    transform: scale(1);
+    background-color: rgba(0, 0, 0, .4)
+}
+
+.ehover11 {
+    background: linear-gradient(45deg, #ff89e9 0, #05abe0 100%)
+}
+
+.ehover11 img {
+    max-width: none;
+    width: calc(100% + 60px);
+    transition: opacity .35s, transform .45s;
+    transform: translate3d(-40px, 0, 0)
+}
+
+.ehover11 .overlay::before {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    bottom: 20px;
+    left: 20px;
+    border: 1px solid #fff;
+    opacity: 0;
+    transition: opacity .35s, transform .45s;
+    transform: translate3d(-20px, 0, 0)
+}
+
+.ehover11 .overlay {
+    padding: 3em;
+    text-align: left
+}
+
+.ehover11 h2 {
+    background-color: transparent;
+    padding: 15% 0 10px;
+    text-align: left
+}
+
+.ehover11 button.info {
+    color: #FFF;
+    opacity: 0;
+    margin: 0;
+    padding: 0;
+    border: none;
+    transition: opacity .35s, transform .45s;
+    transform: translate3d(-10px, 0, 0)
+}
+
+.ehover11:hover img {
+    opacity: .6;
+    transform: translate3d(0, 0, 0)
+}
+
+.ehover11:hover .overlay::before,
+.ehover11:hover button.info {
+    opacity: 1;
+    transform: translate3d(0, 0, 0)
+}
+
+.ehover12 {
+    background: #42b078
+}
+
+.ehover12 img {
+    max-width: none;
+    width: calc(100% + 20px);
+    transition: opacity .35s, transform .35s;
+    transform: translate3d(-10px, 0, 0);
+    backface-visibility: hidden
+}
+
+.ehover12:hover img {
+    opacity: .4;
+    transform: translate3d(0, 0, 0)
+}
+
+.ehover12 .overlay {
+    padding: 50px 20px
+}
+
+.ehover12 h2 {
+    position: relative;
+    overflow: hidden;
+    padding: .5em 0;
+    background-color: transparent
+}
+
+.ehover12 h2::after {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: #fff;
+    transition: transform .35s;
+    transform: translate3d(-100%, 0, 0)
+}
+
+.ehover12:hover h2::after {
+    transform: translate3d(0, 0, 0)
+}
+
+.ehover12 button {
+    color: #FFF;
+    opacity: 0;
+    transition: opacity .35s, transform .35s;
+    transform: translate3d(100%, 0, 0)
+}
+
+.ehover12:hover button {
+    opacity: 1;
+    transform: translate3d(0, 0, 0)
+}
+
+.ehover13 img {
+    transition: all .35s
+}
+
+
+.ehover13:hover img {
+    filter: brightness(.6);
+}
+
+.ehover13 .overlay {
+    width: 80%;
+    height: 80%;
+    left: 10%;
+    top: 10%;
+    border-bottom: 1px solid #FFF;
+    border-top: 1px solid #FFF;
+    transition: opacity .35s, transform .35s;
+    transform: scale(0, 1)
+}
+
+.ehover13:hover .overlay {
+    opacity: 1;
+    transform: scale(1)
+}
+
+.ehover13 button,
+.ehover13 h2 {
+    opacity: 0;
+    color: #FFF;
+    padding: 1em 0
+}
+
+.ehover13 button {
+    transition: opacity .35s, transform .35s;
+    transform: translate3d(0, 100%, 0)
+}
+
+.ehover13 h2 {
+    background-color: transparent;
+    -webkit-transition: opacity .35s, -webkit-transform .35s;
+    transition: opacity .35s, transform .35s;
+    transform: translate3d(0, -100%, 0)
+}
+
+.ehover13:hover button,
+.ehover13:hover h2 {
+    opacity: 1;
+    transform: translate3d(0, 0, 0)
+}

@@ -16,6 +16,7 @@
     <!-- Custom Css-->
     <link rel="stylesheet" href="./css/Home/Carousel.css">
     <link rel="stylesheet" href="./css/Home/Promotion.css">
+    <link rel="stylesheet" href="./css/Home/effects.min.css">    
 
     <style>
         * {
@@ -31,78 +32,28 @@
             height: 100px;
         }
 
-
-        .hovereffect {
-            overflow: hidden;
-            position: relative;
-            text-align: center;
-            background: linear-gradient(45deg, #ff89e9 0%, #05abe0 100%);
-        }
-
-        .hovereffect .overlay {
-            width: 100%;
-            height: 100%;
-            position: absolute;
-            overflow: hidden;
-            top: 0;
-            left: 0;
-            padding: 3em;
-            text-align: left;
-        }
-
-        .hovereffect img {
-            display: block;
-            position: relative;
-            width: calc(100% + 60px);
-            transition: opacity 0.35s, transform 0.45s;
-            transform: translate3d(-40px, 0, 0);
-            /* 圖片位移 */
-        }
-
-        .hovereffect:hover img {
-            opacity: 0.6;
-            transform: translate3d(0, 0, 0);
-        }
-
-        .hovereffect h5 {
-            color: #fff;
-            position: relative;
-            padding: 15% 0 10px 0;
-            text-align: left;
-        }
-
-        .hovereffect .overlay:before {
-            position: absolute;
-            top: 20px;
-            right: 20px;
-            bottom: 20px;
-            left: 20px;
-            border: 1px solid #fff;
-            content: '';
-            opacity: 0;
-            transition: opacity 0.35s, transform 0.45s;
-            transform: translate3d(-20px, 0, 0);
-        }
-
-        .hovereffect a,
-        .hovereffect p {
-            color: #FFF;
-            opacity: 0;
-            transition: opacity 0.35s, transform 0.45s;
-            transform: translate3d(-10px, 0, 0);
-        }
-
-        .hovereffect:hover .overlay:before,
-        .hovereffect:hover a,
-        .hovereffect:hover p {
-            opacity: 1;
-            transform: translate3d(0, 0, 0);
-        }
         .gallery-left{
             overflow: hidden;
         }
-        .gallery-left img{
-            width: 100%;
+
+        @media only screen and (min-width: 768px) 
+        {
+            .gallery-left-img { 
+                height: 100%;
+                background-image: url('./images/tour_venice_2-370x420.jpg'); 
+                background-position: center;    /* 垂直水平置中 */
+                background-size: cover;
+            }
+        }
+
+        @media only screen and (max-width: 768px) 
+        {
+            .gallery-left-img { 
+                height: 300px;
+                background-image: url('./images/tour_venice_2-370x420.jpg'); 
+                background-position: center;    /* 垂直水平置中 */
+                background-size: cover;
+            }
         }
     </style>
 </head>
@@ -231,45 +182,75 @@
 <div id="ParallaxSection">       
      
 </div>
-
     <div id="GallerySection" class="row no-gutters">
             <div class="col-md-4 col-sm-12 col-xs-12 gallery-left">
-                <img src="./images/tour_venice_2-370x420.jpg" alt="">
+                <div class="gallery-left-img">
+                </div>
             </div>
             <div class="col-md-8 col-sm-12 col-xs-12">
                 <div class="row no-gutters">
-                    <div class="col-md-4 col-sm-4 col-xs-12 hovereffect">
-                            <img class="img-responsive" src="./images/f.jpg" alt="">
-                            <div class="overlay">
-                                <h5>Effect 11</h5>
-                                <p>
-                                    <a href="#">LINK HERE</a>
-                                </p>
+                    <div class="col-md-4 col-sm-4 col-xs-12">
+                            <div class="hover ehover11">
+                                <img class="img-responsive" src="images/p3.jpg" alt="">
+                                <div class="overlay">
+                                    <h2>Effect 11</h2>
+                                    <button class="info nullbutton" data-toggle="modal" data-target="#modal11">Show code
+                                    </button>
+                                </div>
                             </div>
                     </div>
-                    <div class="col-md-4 col-sm-4 col-xs-12 hovereffect">
-                            <img class="img-responsive" src="./images/f.jpg" alt="">
+                    <div class="col-md-4 col-sm-4 col-xs-12">
+                        <div class="hover ehover1v2">
+                            <img class="img-responsive" src="images/p23.jpg" alt="">
                             <div class="overlay">
-                                <h5>Effect 11</h5>
-                                <p>
-                                    <a href="#">LINK HERE</a>
-                                </p>
+                                <h2>Hover effect 1 v2</h2>
+                                <button class="info" data-toggle="modal" data-target="#modal1v2">Show code
+                                </button>
                             </div>
+                        </div>
                     </div>
-                    <div class="col-md-4 col-sm-4 col-xs-12 hovereffect">
-                            <img class="img-responsive" src="./images/f.jpg" alt="">
+                    <div class="col-md-4 col-sm-4 col-xs-12">
+                        <div class="hover ehover12">
+                            <img class="img-responsive" src="images/p26.jpg" alt="">
                             <div class="overlay">
-                                <h5>Effect 11</h5>
-                                <p>
-                                    <a href="#">LINK HERE</a>
-                                </p>
+                                <h2>Effect 12</h2>
+                                <button class="info nullbutton" data-toggle="modal" data-target="#modal12">Show code
+                                </button>
                             </div>
+                        </div>
                     </div>
                 </div>
                 <div class="row no-gutters">
-                    <div class="col-md-4 col-sm-4 col-xs-12"></div>
-                    <div class="col-md-4 col-sm-4 col-xs-12"></div>
-                    <div class="col-md-4 col-sm-4 col-xs-12"></div>
+                    <div class="col-md-4 col-sm-4 col-xs-12">
+                        <div class="hover ehover1">
+                            <img class="img-responsive" src="images/girl.jpg" alt="">
+                            <div class="overlay">
+                                <h2>Hover effect 1</h2>
+                                <button class="info" data-toggle="modal" data-target="#modal1">Show code
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-sm-4 col-xs-12">
+                        <div class="hover ehover13">
+                            <img class="img-responsive" src="images/p4.jpg" alt="">
+                            <div class="overlay">
+                                <h2>Effect 13</h2>
+                                <button class="info nullbutton" data-toggle="modal" data-target="#modal13">Show code
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-sm-4 col-xs-12">
+                        <div class="hover ehover5">
+                            <img class="img-responsive" src="images/p10.jpg" alt="">
+                            <div class="overlay">
+                                <h2>Hover effect 5</h2>
+                                <button class="info" data-toggle="modal" data-target="#modal5">Show code
+                                </button>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
